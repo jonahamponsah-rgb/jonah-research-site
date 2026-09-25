@@ -8,7 +8,7 @@ export const profile = {
     "Developing statistical and machine-learning methods to improve clinical prediction, implementation, and healthcare decision-making.",
   email: "jonahamponsah@gmail.com",
   orcid: "https://orcid.org/0000-0003-4472-779X",
-  github: "https://github.com/jkamponsah",
+  github: "https://github.com/jonahamponsah-rgb",
 };
 
 export const education = [
@@ -153,5 +153,6 @@ export const talks = [
     note: "Research portfolio",
   },
 ];
+
 
 

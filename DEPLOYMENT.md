@@ -4,7 +4,7 @@ This project uses Node.js 24.x. `vercel.json` selects Next.js, installs the exac
 
 ## Publish to GitHub (PowerShell)
 
-Prerequisites: Git and GitHub CLI (`gh`), with a Git commit identity configured. The commands below create the public repository `jkamponsah/jonah-research-site`; change the owner/name if desired.
+Prerequisites: Git and GitHub CLI (`gh`), with a Git commit identity configured. The commands below create the public repository `jonahamponsah-rgb/jonah-research-site`; change the owner/name if desired.
 
 ```powershell
 Set-Location 'C:\Users\jkamp\Documents\Codex\jonah-research-site'
@@ -13,14 +13,14 @@ git add .
 git diff --cached --stat
 git commit -m "Initial public release of research website"
 gh auth login
-gh repo create jkamponsah/jonah-research-site --public --source=. --remote=origin
+gh repo create jonahamponsah-rgb/jonah-research-site --public --source=. --remote=origin
 git push -u origin main
 ```
 
 If the empty GitHub repository already exists, replace `gh repo create` with:
 
 ```powershell
-git remote add origin https://github.com/jkamponsah/jonah-research-site.git
+git remote add origin https://github.com/jonahamponsah-rgb/jonah-research-site.git
 ```
 
 Do not initialize the remote repository with a README or license before this first push. If Git asks for a commit identity, configure your name and your chosen GitHub verified or noreply commit email locally, then rerun the commit.
@@ -51,3 +51,4 @@ Alternatively, import the repository at https://vercel.com/new and click Deploy.
 - Frozen-lockfile installation and production build passed locally. A remote Vercel build has not yet been run.
 
 The public resume and portraits are intentionally included in Git and deployment uploads. Keep future secrets outside `public` and out of source control.
+
