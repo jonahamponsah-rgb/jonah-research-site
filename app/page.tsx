@@ -9,7 +9,7 @@ export default function Home() {
     <>
       <section className="hero shell">
         <div className="hero-copy">
-          <p className="eyebrow">Statistical methods &amp; health research</p>
+          <p className="eyebrow" style={{ textTransform: "none" }}>Methods. Implementation. Impact.</p>
           <h1>{profile.name}</h1>
           <p className="hero-role">{profile.role}</p>
           <p className="hero-intro">{profile.intro}</p>
