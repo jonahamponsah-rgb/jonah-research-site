@@ -81,6 +81,7 @@ Project stage labels are editorial refinements of the existing content, not newl
 - Rebuild assets with `node scripts/generate-brand-assets.cjs` (uses sharp already provided by Next.js; no added dependency).
 - After building, run `pnpm start --port 3001`, then `node scripts/check-launch.cjs`. Set `CHECK_BASE` to a public origin to run the same checks against deployment.
 
-Analytics has not been added. To opt in later, enable Web Analytics for the project in Vercel, install `@vercel/analytics`, add its Next.js `Analytics` component to the root layout, and redeploy. See https://vercel.com/docs/analytics/quickstart .
+The official `@vercel/analytics` package is integrated using its Next.js App Router component in the root layout. Enable Web Analytics for the project in the Vercel dashboard to collect and view production visits. See https://vercel.com/docs/analytics/quickstart .
 
 For discovery, submit https://jonahamponsah.com/sitemap.xml in Google Search Console after verifying ownership. A sitemap enables discovery but does not guarantee indexing or ranking.
+
