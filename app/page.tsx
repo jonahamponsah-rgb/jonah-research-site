@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { siteUrl } from "@/lib/seo";
 import Image from "next/image";
 import { CVDownload } from "@/components/CVDownload";
 import { PublicationLinks } from "@/components/PublicationLinks";
@@ -7,6 +8,16 @@ import { currentWork, implementationManuscript, profile, projects, publications,
 export default function Home() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": `${siteUrl}/#person`,
+        name: "Jonah Kwesi Amponsah",
+        honorificSuffix: "PhD",
+        url: siteUrl,
+        image: `${siteUrl}/portraits/jonah-amponsah-black-suit.png`,
+        sameAs: [profile.orcid, profile.github],
+      }).replace(/</g, "\\u003c") }} />
       <section className="hero shell">
         <div className="hero-copy">
           <p className="eyebrow" style={{ textTransform: "none" }}>Methods. Implementation. Impact.</p>

@@ -1,12 +1,10 @@
+import { pageMetadata } from "@/lib/seo";
 import Image from "next/image";
 import { Education } from "@/components/Education";
 import Link from "next/link";
 import { profile, researchAreas } from "../data";
 
-export const metadata = {
-  title: "About",
-  description: "Get to know Jonah Kwesi Amponsah, PhD: statistician, machine learning researcher, and implementation scientist at the University of Wisconsin–Madison.",
-};
+export const metadata = pageMetadata("About", "Biography, academic training, and research interests of Jonah Kwesi Amponsah, PhD, a statistician and implementation science researcher.", "/about");
 
 export default function AboutPage() {
   return <>
@@ -22,4 +20,5 @@ export default function AboutPage() {
     <section className="cta shell"><p className="eyebrow">Scientific exchange</p><h2>Good research starts with thoughtful questions.</h2><Link className="button button-primary" href="/contact">Connect with me →</Link></section>
   </>;
 }
+
 

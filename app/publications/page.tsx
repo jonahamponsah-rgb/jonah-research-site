@@ -1,8 +1,9 @@
+import { pageMetadata } from "@/lib/seo";
 import { PageIntro } from "@/components/PageIntro";
 import { implementationManuscript, publications } from "../data";
 import { PublicationLinks } from "@/components/PublicationLinks";
 
-export const metadata = { title: "Publications" };
+export const metadata = pageMetadata("Publications", "Published research and manuscripts by Jonah Kwesi Amponsah, with DOI, PubMed, and available open-access full-text links.", "/publications");
 
 export default function PublicationsPage() {
   return (
@@ -32,3 +33,4 @@ export default function PublicationsPage() {
     </>
   );
 }
+

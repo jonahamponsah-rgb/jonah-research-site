@@ -1,7 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
 import { PageIntro } from "@/components/PageIntro";
 import { profile } from "../data";
 
-export const metadata = { title: "Contact", description: "Contact Jonah Kwesi Amponsah about quantitative methods, implementation research, clinical prediction, and population health." };
+export const metadata = pageMetadata("Contact", "Contact Jonah Kwesi Amponsah about quantitative methods, implementation research, clinical prediction, and population health.", "/contact");
 
 export default function ContactPage() {
   return <>
@@ -12,3 +13,4 @@ export default function ContactPage() {
     </section>
   </>;
 }
+

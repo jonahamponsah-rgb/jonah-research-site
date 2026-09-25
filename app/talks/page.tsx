@@ -1,7 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
 import { PageIntro } from "@/components/PageIntro";
 import { talks } from "../data";
 
-export const metadata = { title: "Talks" };
+export const metadata = pageMetadata("Talks & Presentations", "Conference presentations and scientific talks on implementation trial design, explainable AI, and applied biostatistics.", "/talks");
 
 export default function TalksPage() {
   return (
@@ -20,3 +21,4 @@ export default function TalksPage() {
     </>
   );
 }
+

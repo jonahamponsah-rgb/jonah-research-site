@@ -1,6 +1,6 @@
 # Public deployment
 
-This project uses Node.js 24.x. `vercel.json` selects Next.js, installs the exact pnpm 11.25.0 version with a frozen lockfile, and runs `npm run build`. Leave Vercel's output directory at its framework default. No required environment variables or external services are needed. Optionally set `SITE_URL` to your final HTTPS origin for metadata and redeploy.
+This project uses Node.js 24.x. `vercel.json` selects Next.js, installs the exact pnpm 11.25.0 version with a frozen lockfile, and runs `npm run build`. Leave Vercel's output directory at its framework default. No required environment variables or external services are needed. Canonical metadata is fixed to https://jonahamponsah.com in lib/seo.ts.
 
 ## Publish to GitHub (PowerShell)
 
@@ -51,4 +51,5 @@ Alternatively, import the repository at https://vercel.com/new and click Deploy.
 - Frozen-lockfile installation and production build passed locally. A remote Vercel build has not yet been run.
 
 The public resume and portraits are intentionally included in Git and deployment uploads. Keep future secrets outside `public` and out of source control.
+
 

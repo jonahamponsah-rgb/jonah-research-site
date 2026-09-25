@@ -1,8 +1,9 @@
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { PageIntro } from "@/components/PageIntro";
 import { projects } from "../data";
 
-export const metadata = { title: "Projects" };
+export const metadata = pageMetadata("Projects", "Research projects in SHAP-guided augmentation, genomic testing in cancer care, and geographic prioritization for health interventions.", "/projects");
 
 export default function ProjectsPage() {
   return (
@@ -23,3 +24,4 @@ export default function ProjectsPage() {
     </>
   );
 }
+

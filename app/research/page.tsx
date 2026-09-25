@@ -1,7 +1,8 @@
+import { pageMetadata } from "@/lib/seo";
 import { PageIntro } from "@/components/PageIntro";
 import { researchAreas } from "../data";
 
-export const metadata = { title: "Research" };
+export const metadata = pageMetadata("Research", "Research in explainable AI, predictive modeling, implementation science, cancer care, and spatial population health.", "/research");
 
 export default function ResearchPage() {
   return (
@@ -25,3 +26,4 @@ export default function ResearchPage() {
     </>
   );
 }
+

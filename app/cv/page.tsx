@@ -1,8 +1,9 @@
+import { pageMetadata } from "@/lib/seo";
 import { Education } from "@/components/Education";
 import { PageIntro } from "@/components/PageIntro";
 import { CVDownload } from "@/components/CVDownload";
 
-export const metadata = { title: "CV" };
+export const metadata = pageMetadata("CV & Resume", "Academic training and research experience of Jonah Kwesi Amponsah, PhD. Download the current resume in DOCX format.", "/cv");
 
 export default function CVPage() {
   return (
@@ -17,4 +18,5 @@ export default function CVPage() {
     </>
   );
 }
+
 

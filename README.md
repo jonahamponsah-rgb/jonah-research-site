@@ -24,7 +24,7 @@ No environment variables or external services are required for local development
 
 ## Before publishing
 
-1. Set `SITE_URL` to your final domain.
+1. The canonical origin is `https://jonahamponsah.com`, defined in `lib/seo.ts`.
 2. Keep the public profile links in `app/data.ts` current.
 3. Confirm manuscript and presentation statuses before publishing.
 4. Replace the DOCX in `public/downloads/` when the resume changes.
@@ -52,7 +52,7 @@ The supplied resume is stored at `public/downloads/Jonah_Kwesi_Amponsah_Resume_F
 
 About and CV share all five degrees and the dissertation title, without graduation years. Contact and footer use only the supplied public email, ORCID, and GitHub links.
 
-Set optional `SITE_URL` to your real public origin before publishing; no domain or institutional URL is assumed. Local development needs no environment variables.
+Production metadata always uses `https://jonahamponsah.com`; no environment variable is required.
 
 With a standard Node.js installation that includes npm, `npm run dev` and `npm run build` execute the same scripts as pnpm. Use pnpm for dependency installation to preserve the committed lockfile.
 
@@ -68,3 +68,19 @@ Publication records were checked against these sources:
 Project stage labels are editorial refinements of the existing content, not newly verified progress updates. No submission, acceptance, or completion claims have been added.
 
 
+
+
+## Search and sharing launch configuration
+
+- `lib/seo.ts` centralizes the canonical custom domain and page-specific metadata.
+- `app/sitemap.ts` includes the 11 public pages, including all project detail pages; the resume is accessible but not listed as a page.
+- `app/robots.ts` permits public-page crawling and points to the sitemap.
+- `app/page.tsx` includes Person JSON-LD, retaining the previously corrected GitHub account `jonahamponsah-rgb` from shared profile data.
+- `app/favicon.ico`, `app/icon.svg`, and `app/apple-icon.png` provide brand icons.
+- `public/social/jonah-amponsah.png` is the 1200 × 630 social card used by Open Graph and Twitter/X metadata.
+- Rebuild assets with `node scripts/generate-brand-assets.cjs` (uses sharp already provided by Next.js; no added dependency).
+- After building, run `pnpm start --port 3001`, then `node scripts/check-launch.cjs`. Set `CHECK_BASE` to a public origin to run the same checks against deployment.
+
+Analytics has not been added. To opt in later, enable Web Analytics for the project in Vercel, install `@vercel/analytics`, add its Next.js `Analytics` component to the root layout, and redeploy. See https://vercel.com/docs/analytics/quickstart .
+
+For discovery, submit https://jonahamponsah.com/sitemap.xml in Google Search Console after verifying ownership. A sitemap enables discovery but does not guarantee indexing or ranking.
