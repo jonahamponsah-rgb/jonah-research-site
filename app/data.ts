@@ -19,9 +19,19 @@ export const education = [
   { degree: "BS in Mathematics and Statistics", institution: "University of Cape Coast" },
 ];
 
-export const implementationManuscript = {
-  title: "Choosing experimental designs for implementation strategy trials: A question-driven framework with practical tools and exemplars",
-  status: "Under peer review",
+export const implementationPublication = {
+  year: 2026,
+  publishedDate: "2026-11-12",
+  title: "Aligning research questions with randomized design features for implementation strategy trials: a practical framework with tools and exemplars",
+  venue: "Implementation Science Communications",
+  type: "Methodology",
+  authors: "Amponsah JK, Resnik F, Ellis SD.",
+  doi: "10.1186/s43058-026-01171-y",
+  href: "https://doi.org/10.1186/s43058-026-01171-y",
+  links: [
+    { label: "Publisher / DOI", href: "https://doi.org/10.1186/s43058-026-01171-y" },
+    { label: "Open-access full text", href: "https://link.springer.com/article/10.1186/s43058-026-01171-y" },
+  ],
 };
 
 export const researchAreas = [
@@ -49,6 +59,21 @@ export const researchAreas = [
 ];
 
 export const publications = [
+  implementationPublication,
+  {
+    year: 2026,
+    publishedDate: "2026-11-05",
+    title: "SHAP enhanced predictive modeling for clinical machine learning",
+    venue: "Discover Health Systems",
+    type: "Research Article",
+    authors: "Amponsah JK, Thompson JA, Ellis SD.",
+    doi: "10.1007/s44250-026-00440-w",
+    href: "https://doi.org/10.1007/s44250-026-00440-w",
+    links: [
+      { label: "Publisher / DOI", href: "https://doi.org/10.1007/s44250-026-00440-w" },
+      { label: "Open-access full text", href: "https://link.springer.com/article/10.1007/s44250-026-00440-w" },
+    ],
+  },
   {
     year: 2025,
     title: "Explainable AI predicting Alzheimer’s disease with latent multimodal deep neural networks",

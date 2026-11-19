@@ -1,14 +1,14 @@
 import { pageMetadata } from "@/lib/seo";
 import { PageIntro } from "@/components/PageIntro";
-import { implementationManuscript, publications } from "../data";
+import { publications } from "../data";
 import { PublicationLinks } from "@/components/PublicationLinks";
 
-export const metadata = pageMetadata("Publications", "Published research and manuscripts by Jonah Kwesi Amponsah, with DOI, PubMed, and available open-access full-text links.", "/publications");
+export const metadata = pageMetadata("Publications", "Published research by Jonah Kwesi Amponsah in implementation trial design, explainable prediction, and population health, with DOI and full-text links.", "/publications");
 
 export default function PublicationsPage() {
   return (
     <>
-      <PageIntro eyebrow="Publications" title="Publications & manuscripts." text="Published research in explainable prediction and spatial population health, alongside a manuscript under peer review in implementation study design." />
+      <PageIntro eyebrow="Publications" title="Peer-reviewed publications." text="Published research in implementation study design, explainable prediction, and spatial population health, with links to publisher records and available open-access full text." />
       <section className="shell section compact-top">
         <div className="publication-table">
           {publications.map((pub) => (
@@ -24,10 +24,6 @@ export default function PublicationsPage() {
               </div>
             </article>
           ))}
-          <article className="publication-record">
-            <div className="publication-year">Manuscript</div>
-            <div><p className="card-kicker">{implementationManuscript.status}</p><h2>{implementationManuscript.title}</h2><p>A question-driven framework for selecting experimental designs to evaluate implementation strategies.</p></div>
-          </article>
         </div>
       </section>
     </>

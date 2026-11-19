@@ -3,7 +3,7 @@ import { siteUrl } from "@/lib/seo";
 import Image from "next/image";
 import { CVDownload } from "@/components/CVDownload";
 import { PublicationLinks } from "@/components/PublicationLinks";
-import { currentWork, implementationManuscript, profile, projects, publications, researchAreas, talks } from "./data";
+import { currentWork, implementationPublication, profile, projects, publications, researchAreas, talks } from "./data";
 
 export default function Home() {
   return (
@@ -98,7 +98,7 @@ export default function Home() {
       <section className="section section-tint">
         <div className="shell split-feature">
           <div><p className="eyebrow">04 / Current Work</p><h2>Questions guiding<br />the methods.</h2><p className="lede-sm">Cross-cutting questions in evaluation, study design, and spatial analysis that inform my research agenda.</p></div>
-          <div className="focus-list">{currentWork.map((focus, index) => <article key={focus.title}><span className="card-index">0{index + 1}</span><div><p className="card-kicker">{focus.theme}</p><h3>{focus.title}</h3><p>{focus.text}</p>{focus.theme === "Study design" && <p><Link className="text-link" href="/publications">Implementation-design manuscript: {implementationManuscript.status.toLowerCase()} →</Link></p>}</div></article>)}</div>
+          <div className="focus-list">{currentWork.map((focus, index) => <article key={focus.title}><span className="card-index">0{index + 1}</span><div><p className="card-kicker">{focus.theme}</p><h3>{focus.title}</h3><p>{focus.text}</p>{focus.theme === "Study design" && <p><Link className="text-link" href={implementationPublication.href}>Implementation-design article: Published →</Link></p>}</div></article>)}</div>
         </div>
       </section>
 
@@ -115,3 +115,4 @@ export default function Home() {
     </>
   );
 }
+
