@@ -101,6 +101,20 @@ export const publications = [
       { label: "Open-access full text", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12822080/" },
     ],
   },
+  {
+    year: 2022,
+    title: "Geographic differences in community oncology provider and practice location characteristics in the central United States",
+    venue: "The Journal of Rural Health",
+    type: "Research Article",
+    authors: "Ellis SD, Thompson JA, Boyd SS, Roberts AW, Charlton M, Brooks JV, Birken SA, Wulff-Burchfield E, Amponsah J, Petersen S, Kinney AY, Ellerbeck E.",
+    doi: "10.1111/jrh.12663",
+    href: "https://doi.org/10.1111/jrh.12663",
+    links: [
+      { label: "Publisher / DOI", href: "https://doi.org/10.1111/jrh.12663" },
+      { label: "PubMed", href: "https://pubmed.ncbi.nlm.nih.gov/35384064/" },
+      { label: "Free full text", href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9589478/" },
+    ],
+  },
 ];
 
 export const projects = [
